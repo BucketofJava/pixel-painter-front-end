@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,3 +74,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # pixel-painter-front-end
 A simple pixel art creation website
 >>>>>>> b971f931f450772b0a7035c261a695c17d4f7d1a
+=======
+# Pixel Painter
+A simple pixel art creation website
+Not hosted anywhere atm, if you would like to view you need to download the repo and run npm start(If you don't have node installed, google it)
+>>>>>>> 062cc082ca98cf648fb22cbf73182864d348ed79
