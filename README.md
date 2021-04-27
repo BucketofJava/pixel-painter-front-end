@@ -1,4 +1,4 @@
-#Pixel Painter
+# Pixel Painter
 A simple pixel art creation website
 Not hosted anywhere atm
 Made with React
