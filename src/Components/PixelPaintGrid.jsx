@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ColorSelector from './ColorSelector';
 import PixelPaintSquare from './PixelPaintSquare';
+import getLoc from '../Util/routing.jsx'
 function useWindowSize() {
+    
     // Initialize state with undefined width/height so server and client renders match
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
     const [windowSize, setWindowSize] = useState({
@@ -35,7 +37,9 @@ const [smallDivStyle, setSmallDivStyle]=useState({});
 const [maxSizey, setMaxSize]=useState(props.maxSize);
 const [squareColor, setSquareColor]=useState("red");
 const [mouseDown, setMouseDown]=useState(false);
+
 useEffect(() => {
+    getLoc()
     setMaxSize(maxSizey*windowSize.width/originalWindowSize)
     const pixelSize=(maxSizey/props.gridSizeX);
     const scaleFactor=1/Math.max((props.gridSizeY*pixelSize)/maxSizey, 1)
