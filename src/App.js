@@ -1,12 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import RoutableApp from './bucketrouter/RoutableApp';
 import PixelPaintGrid from './Components/PixelPaintGrid';
+import PageNotFound from './Pages/PageNotFound';
+import TestPage from './Pages/TestPage';
 
+
+const routeObj={
+  "test": (() => <TestPage />),
+  home: (() => <PixelPaintGrid gridSizeX="30" gridSizeY="40" maxSize="1200" />),
+  default: (() => <PageNotFound />)
+}
 function App() {
   return (
-    <div className="App">
-      <PixelPaintGrid gridSizeX="30" gridSizeY="40" maxSize="1200"/>
-    </div>
+    <RoutableApp className="App" routeObj={routeObj} />
   );
 }
 
