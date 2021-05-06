@@ -4,11 +4,21 @@ import RoutableApp from './bucketrouter/RoutableApp';
 import PixelPaintGrid from './Components/PixelPaintGrid';
 import PageNotFound from './Pages/PageNotFound';
 import TestPage from './Pages/TestPage';
+import Settings from './Pages/Settings';
+import ProfileSettings from './Pages/ProfileSettings';
+import AccountSettings from './Pages/AccountSettings';
 
 
 const routeObj={
-  "test": (() => <TestPage />),
-  home: (() => <PixelPaintGrid gridSizeX="30" gridSizeY="40" maxSize="1200" />),
+  "settings": {"profile": (() => <ProfileSettings />),
+              "": (() => <Settings />),
+              "account": (() => <AccountSettings />),
+              "test": {
+                "": (() => <Settings />),
+                "testing": (() => <TestPage />)
+              }
+            },
+  "": (() => <PixelPaintGrid gridSizeX="30" gridSizeY="40" maxSize="1200" />),
   default: (() => <PageNotFound />)
 }
 function App() {
