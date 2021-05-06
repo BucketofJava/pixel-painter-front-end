@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ColorSelector from './ColorSelector';
 import PixelPaintSquare from './PixelPaintSquare';
 import getLoc from '../Util/routing.jsx'
+import { useRoute } from '../bucketrouter/routing';
+
 function useWindowSize() {
-    
+
     // Initialize state with undefined width/height so server and client renders match
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
     const [windowSize, setWindowSize] = useState({
@@ -29,6 +31,8 @@ function useWindowSize() {
     return windowSize;
   }
 const PixelPaintGrid= props => {
+  const routeObject=useRoute(window.location.href);
+
 const windowSize=useWindowSize();
 const originalWindowSize=window.innerWidth;
 const [grid, setGrid]=useState([]);
@@ -86,6 +90,7 @@ setGrid(ab);
     return (
 <main onMouseUp={() => {setMouseDown(false)}}>
 <h1>Pixel Painter</h1>
+<h2>{routeObject.getParams().a}</h2>
 <div style={{
     display: "flex",
     justifyContent: "center",
