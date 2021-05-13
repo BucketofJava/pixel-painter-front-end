@@ -3,6 +3,8 @@ import ColorSelector from './ColorSelector';
 import PixelPaintSquare from './PixelPaintSquare';
 import getLoc from '../Util/routing.jsx'
 import { useRoute } from '../bucketrouter/routing';
+import ToolSelector from './ToolSelector';
+
 
 function useWindowSize() {
 
@@ -101,7 +103,7 @@ setGrid(ab);
 {grid}
 </div>
 </div>
-<ColorSelector colorFunc={setSquareColor} />
+<ToolSelector />
 </main>
     );
 }

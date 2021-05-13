@@ -12,11 +12,11 @@ const ColorSelector = props => {
     }))
     }, [colorArr])
     return (
-        <main><div className="card shadow-sm fixed-bottom" style={{zIndex: "5"}}>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+
+        <div style={{display: "flex", height: "4rem", flexDirection: "row", justifyContent: "space-between"}}>
             {divColorArr}
-            </div>
-            </div></main>
+          </div>
+            
     );
 }
 export default ColorSelector;

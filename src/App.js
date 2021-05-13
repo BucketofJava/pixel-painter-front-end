@@ -10,9 +10,11 @@ import AccountSettings from './Pages/AccountSettings';
 
 
 const routeObj={
-  "settings": {"profile": (() => <ProfileSettings />),
+  "settings": {
+    "profile": (() => <ProfileSettings />),
               "": (() => <Settings />),
               "account": (() => <AccountSettings />),
+              ":id": (() => <TestPage />),
               "test": {
                 "": (() => <Settings />),
                 "testing": (() => <TestPage />)
