@@ -1,5 +1,6 @@
 import React from 'react';
-const TestPage=() => {
-    return (<h1>HI</h1>)
+import { useResources } from '../bucketrouter/routing';
+const TestPage=props => {
+    return (<h1>{props.resources.id}</h1>)
 }
 export default TestPage;

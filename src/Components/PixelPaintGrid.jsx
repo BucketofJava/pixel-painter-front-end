@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ColorSelector from './ColorSelector';
-import PixelPaintSquare from './PixelPaintSquare';
 import getLoc from '../Util/routing.jsx'
 import { useRoute } from '../bucketrouter/routing';
 import ToolSelector from './ToolSelector';
