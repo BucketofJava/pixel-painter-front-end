@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import ColorSelector from './ColorSelector';
+import EraserSelector from './EraserSelector';
 
 const ToolSelector=props => {
     const [goBack, setGoBack]=useState(true);
     const [tools, setTools]=useState({"P": <ColorSelector colorFunc={props.colorFunc} backButton={setGoBack} />,
- "E": <div></div>})
+ "E": <EraserSelector eraser={props.colorFunc} backButton={setGoBack} />})
     const toolMain=useMemo(() => {},
     [tools])
     console.log(toolMain)
