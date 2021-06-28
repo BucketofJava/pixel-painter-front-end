@@ -29,7 +29,7 @@ const routeObj={
     }
             },
   "": (() => <PixelPaintGrid gridSizeX="30" gridSizeY="40" maxSize="1200" />),
-  default: (() => <PageNotFound />)
+  "*": (() => <PageNotFound />)
 }
 function App() {
   return (

@@ -101,7 +101,7 @@ setGrid(ab);
 {grid}
 </div>
 </div>
-<ToolSelector />
+<ToolSelector colorFunc={setSquareColor} />
 </main>
     );
 }
